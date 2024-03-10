@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
       // Отображение статистики на ввод
-      if (enteredText.length === originalText.getElementsByTagName('span').length) {
+      if (enteredText.length >= originalText.getElementsByTagName('span').length) {
           const endTime = new Date();
           if (startTime && endTime >= startTime) {
               const timeDiff = (endTime - startTime) / 1000; // Разница времени в секундах
