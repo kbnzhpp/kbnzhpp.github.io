@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById("input_text").addEventListener("blur", function() {
     document.getElementById("input_text").focus(); 
   });
+
+  // Запрещение вставки текста
+  inputText.onpaste = function(event) {
+    event.preventDefault();
+  }
+
+  // Начало печатания
   inputText.addEventListener('input', function() {
     // Старт таймера
     if (!startTime) {
