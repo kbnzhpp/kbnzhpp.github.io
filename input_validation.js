@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const inputText = document.getElementById('input_text');
   const originalText = document.querySelector('.txt');
   let startTime;
+
   // Постоянный фокус на вводе
-  document.getElementById("input_text").addEventListener("blur", function() {
-    document.getElementById("input_text").focus(); 
-  });
+  inputText.onblur = function() {
+    inputText.focus()
+  }
 
   // Запрещение вставки текста
   inputText.onpaste = function(event) {
