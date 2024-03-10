@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault();
   }
 
+  // Общий счетчик введенных символов
+  inputText.addEventListener('change', function() {
+    counterAll++;
+  });
+    
   // Начало печатания
   inputText.addEventListener('input', function() {
     // Старт таймера
@@ -38,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
         originalChars[i].style.color = "rgb(228, 44, 60)";
       }
-      counterAll++;
-}
+      
+  }
 
       // Отображение статистики на ввод
       if (enteredText.length >= originalText.getElementsByTagName('span').length) {
