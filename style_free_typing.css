@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+:root {
+    font-size: 24px;
+}
+
+body {
+    background: rgb(31, 31, 31);
+    background-size: 100%;
+    -ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+body * {
+    color: white;
+}
+div {
+    display: block;
+}
+
+header {
+    font-family: "Mulish";
+    margin-bottom: 4em;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.main_content {
+    display: grid;
+}
+
+.txt {
+    position: relative;
+    margin-top: 15px;
+    width: 900px;
+    margin: 0 auto;
+    transition: opacity 1s ease;
+}
+
+.txt_char {
+    font-family: "Montserrat";
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(128, 128, 128);
+}
+
+.input_txt {
+    position: absolute;
+    display: block;
+    color: transparent;
+    background-color: transparent;
+    outline: none;
+    margin: 0 auto;
+    border: 0;
+}
+
+a.refresh {
+    overflow: hidden;
+    width: 48px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    right: 9px;
+    margin-bottom: 3px; 
+
+}
+
+.text_tr {
+    margin: 0 auto;
+    margin-bottom: 5em;
+}
+
+.keyboard {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 32.5rem;
+    height: 10.917rem;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+  
+.row {
+    margin-top: 4px; 
+    overflow: hidden;
+}
+    
+.key {
+    width: 1.875rem;
+    height: 1.875rem;
+    float: left;
+    font-family: "Comfortaa";
+    line-height: 48px;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 4px;
+    border: 1px solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 4px; 
+    font-size: 16px;
+}
+
+.key_delete {
+    width: 105px;
+}
+  
+.key_tab_slash {
+    width: 75px;
+}
+  
+.key_enter {
+    width: 112px;
+}
+  
+.key_caps {
+    width: 90px;
+}
+  
+.key_shift-left {
+    width: 100px;
+}
+
+.key_shift-right{
+    width: 154px;
+}
+
+.key_spacebar {
+    position: relative;
+    margin: 0 240px;
+    width: 300px;
+}
+  
+.key_bottom-funct {
+    width: 70px;
+}
+
+.key_slash {
+    width: 75px;
+}
+
+.results {
+    display: flex;
+}
+
+.time,
+.wpm,
+.percentage {
+    display: none;
+    font-size: 24px;
+    font-family: "Mulish";
+    margin: 0 auto;
+    opacity: 0;
+    height: 0;
+    transition: opacity 1s ease;
+}
+
+.cursor {
+    position: absolute;
+    width: 2px;
+    height: 1rem;
+    background-color: rgb(184, 237, 255);
+    animation: blink 1s infinite;
+}
