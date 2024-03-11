@@ -47,7 +47,7 @@ header {
 .txt {
     position: relative;
     margin-top: 15px;
-    width: 900px;
+    width: 100%;
     margin: 0 auto;
     transition: opacity 1s ease;
 }
@@ -81,7 +81,7 @@ a.refresh {
 }
 
 .text_tr {
-    margin: 0 auto;
+    margin: 0 15%;
     margin-bottom: 5em;
 }
 
@@ -156,6 +156,7 @@ a.refresh {
 
 .results {
     display: flex;
+    width: 100%;
 }
 
 .time,

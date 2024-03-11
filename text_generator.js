@@ -3,9 +3,9 @@ var text = `В ворота гостиницы губернского город
 
 // Генератор случайных чисел
 function getRandomInt(min, max) { 
- min = Math.ceil(min);  
- max = Math.floor(max);  
- return Math.floor(Math.random() * (max - min + 1)) + min; }  
+    min = Math.ceil(min);  
+    max = Math.floor(max);  
+    return Math.floor(Math.random() * (max - min + 1)) + min; }  
 
 // Генератор рандомного текста из исходника сверху
 var text2 = text.split(' ') 
@@ -17,7 +17,7 @@ var text3 = text2.slice(rand, rand+50).join(' ')
 // Вывод текста на экран его символами
 let result = ''
 for (let i = 0; i < text3.length; i++) {
- const originalChar = text3[i];
- result += `<span id="char${i}" class="txt_char" style="margin-left: 0.3px;">${originalChar}</span>`;
+    const originalChar = text3[i];
+    result += `<span id="char${i}" class="txt_char" style="margin-left: 0.5px;">${originalChar}</span>`;
 }
 document.getElementById('text_random').innerHTML = result
