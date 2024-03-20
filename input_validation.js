@@ -40,7 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             counterAll++;
         }
-  
+        
+        // Клавиатура 
+        // Подсветка кнопок при нажатии той или иной клавиши
+        const enteredChar = enteredText[-1];
+        
         // Отображение статистики на ввод
         if (enteredText.length >= originalText.getElementsByTagName('span').length) {
             const endTime = new Date();
@@ -120,12 +124,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Просто печатание
-        const neededChar = 'char' + (enteredText.length - 1);
+        const scrollOffsetY = window.pageYOffset || document.documentElement.scrollTop; // Кол-во пикселей прокрутки (вертикальное смещение)
+        const neededChar = 'char' + (inputText.value.length - 1);
         const cursorPosition = document.getElementById(neededChar).getBoundingClientRect();
+        const cursorTopWithScroll = cursorPosition.top + scrollOffsetY;
         cursor.style.left = cursorPosition.right + 'px';
-        cursor.style.top = cursorPosition.top + 'px';
+        cursor.style.top = cursorTopWithScroll + 'px';
 
-        //Баг с курсором при изменении размера окна
         window.addEventListener('resize', function() {
             cursor.style.display = 'none';
             const neededChar = 'char' + (enteredText.length - 1);
@@ -134,11 +139,10 @@ document.addEventListener('DOMContentLoaded', function() {
             cursor.style.top = cursorPosition.top + 'px';
             setTimeout(() => {
                 cursor.style.display = 'block';
-            }, 1000);
+            }, 700);
         });
     });
         
-
     // Скрытие клавиатуры в зависимоти от окна
     // Когда окно меняется
     window.addEventListener('resize', function() {
@@ -157,4 +161,5 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.keyboard').style.display = 'block';
         }
     });
+
 });

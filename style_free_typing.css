@@ -113,6 +113,7 @@ a.refresh {
     border-color: rgb(255, 255, 255);
     border-radius: 4px; 
     font-size: 16px;
+    transition: background-color 0.5s ease;
 }
 
 .key_delete {
