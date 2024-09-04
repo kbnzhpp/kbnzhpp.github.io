@@ -1,4 +1,4 @@
-var max_img = 6
+var max_img = 7
 function Random() {
     return Math.floor(Math.random() * (max_img - 1) + 1)
 }
