@@ -6,15 +6,18 @@ html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 2rem;
     font-size: 2em;
+    height: 40px;
     color: #ffffff;
     margin: auto;
     padding: 0;
-    background-color: #7300df;
     border-radius: 12px;
+    background-color: rgb(197, 6, 255);
 }
 
 .showleha {
-    display: none;
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .photo {
