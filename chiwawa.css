@@ -1,13 +1,24 @@
 html {
-    background-color: #505050;
+    background-color: gray;
 }
 .random-butt {
     display: block;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 20em;
-    font-size: 15em;
-    color: red;
-    margin: 0 auto;
-    background-color: #6bb678;
-    border-radius: 1em;
+    font-weight: 2rem;
+    font-size: 2em;
+    color: #ffffff;
+    margin: auto;
+    padding: 0;
+    background-color: #7300df;
+    border-radius: 12px;
+}
+
+.showleha {
+    display: none;
+}
+
+.photo {
+    display: block;
+    margin: 1em auto;
+    padding: 0;
 }
