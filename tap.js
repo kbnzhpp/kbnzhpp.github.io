@@ -1,22 +1,46 @@
-var max_img = 7
+var max_img = 8
 
 function Random() {
-    return Math.floor(Math.random() * (max_img - 1) + 1)
-}
+    let i = 0
+    for (let j = 1; j < max_img+1; j++) {
+        var x = Math.random()
+        if (x < 0.55) {
+            i++
+        }
+    }
+    return i 
+}   
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.querySelector('#button1')
+    const button1 = document.querySelector('#button1')
     const photo = document.querySelector('.photo')
     const showleha = document.querySelector('.showleha')
-    if (button) {
-        button.addEventListener('click', (event) => {
+    const rarity = document.querySelector('#rarity')
+    if (button1) {
+        button1.addEventListener('click', (event) => {
             event.preventDefault() // prevent update of page
             showleha.style.opacity = 0
+            button1.setAttribute('disabled', '')
+            
+
             // do a lil delay to apply animation
             setTimeout(() => {
-                var final_img = "imgs/" + Random() + '.jpg'
+                let rare = Random()
+                var final_img = "imgs/" + rare + '.jpg'
                 photo.setAttribute('src', final_img)
-                showleha.style.opacity = 1 // turn off animation again
+                ranks = ['Обычный', 'Обычный', 'Редкий', 'Редкий', 'Редкий', 'Эпический', 'Эпический', 'Легендарный']
+                ranks_colors = ['#c2c2c2', '#c2c2c2', '#00f7ff', '#00f7ff', '#00f7ff', '#c918ff', '#c918ff', '#ffc400']
+                ranks_glow = ['#ce4ff5', '#ffd448']
+                rarity.style.color = ranks_colors[rare-1]
+                if (rare >= 6) {
+                    rarity.style.textShadow = "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
+                } else {
+                    rarity.style.textShadow = "";
+                }
+                rarity.innerHTML = ranks[rare-1]
+                showleha.style.opacity = 1 // turn on animation again
+                button1.removeAttribute('disabled', '')
             }, 1000); // 1000 ms delay
         });
     }
