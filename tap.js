@@ -1,7 +1,7 @@
 var max_img = 8
 
 function Random() {
-    let i = 0
+    let i = 1
     for (let j = 1; j < max_img+1; j++) {
         var x = Math.random()
         if (x < 0.55) {
