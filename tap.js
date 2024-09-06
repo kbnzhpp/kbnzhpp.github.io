@@ -4,7 +4,7 @@ function Random() {
     let i = 1
     for (let j = 1; j < max_img; j++) {
         var x = Math.random()
-        if (x < 0.39) {
+        if (x < 0.35) {
             i++
         }
     }
