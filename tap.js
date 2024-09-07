@@ -11,7 +11,6 @@ function Random() {
     return i 
 }   
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const button1 = document.querySelector('#button1')
     const photo = document.querySelector('.photo')
