@@ -75,7 +75,7 @@ html {
 
 .chances {
     display: inline-flex;
-    margin: 10% 0 auto 0;
+    margin: 10% 20px auto 0;
     row-gap: auto;
     width: 10vw;
     flex-wrap: wrap;
