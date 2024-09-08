@@ -18,19 +18,31 @@
 html {
     background-color: #181818;
 }
+
+.main {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 700px 1fr;
+    grid-template-rows: 40px 1fr;
+}
+
+.rand {
+    grid-row: 1;
+}
+
 .random-butt {
     display: block;
     margin: auto;
     padding: 0;
     width: 350px;
+    height: 40px;
     font-size: 2em;
     font-family: 'Rubik';
     height: 45px;
     color: #ffffff;
     background-color: rgb(197, 6, 255);
     border: 2px solid #ffffff;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
 
 .random-butt:hover {
@@ -61,10 +73,37 @@ html {
     border-radius: 24px;
 }
 
-.random-items{
-    display: grid;
+.chances {
+    display: inline-flex;
+    margin: 10% 0 auto 0;
+    row-gap: auto;
+    width: 10vw;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
 }
 
-.chances {
+.chance {
+    font-family: "Rubik";
+    font-size: 1.5em;
+    margin: 10px;
+}
 
+.common {
+    color: #c2c2c2;
+}
+
+.rare {
+    color: #00f7ff;
+}
+
+.epic {
+    color: #c918ff;
+    text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
+}
+
+.legendary {
+    color: #ffc400;
+    text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
 }
