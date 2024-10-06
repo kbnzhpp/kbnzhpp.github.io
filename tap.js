@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 let rare = Random()
                 var final_img = "imgs/" + rare + '.jpg'
                 photo.setAttribute('src', final_img)
-                ranks = ['Обычный', 'Обычный', 'Редкий', 'Редкий', 'Редкий', 'Эпический', 'Эпический', 'Легендарный', 'Легендарный']
-                ranks_colors = ['#c2c2c2', '#c2c2c2', '#00f7ff', '#00f7ff', '#00f7ff', '#c918ff', '#c918ff', '#ffc400', '#ffc400']
+                ranks = ['Обычный', 'Обычный', 'Редкий', 'Редкий', 'Редкий', 'Редкий', 'Эпический', 'Эпический', 'Легендарный']
+                ranks_colors = ['#c2c2c2', '#c2c2c2', '#00f7ff', '#00f7ff', '#00f7ff', '#00f7ff', '#c918ff', '#c918ff', '#ffc400']
                 ranks_glow = ['#ce4ff5', '#ffd448']
                 rarity.style.color = ranks_colors[rare-1]
                 photo.style.borderColor = ranks_colors[rare-1]
