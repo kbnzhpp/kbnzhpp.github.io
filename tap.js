@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ranks_glow = ['#ce4ff5', '#ffd448']
                 rarity.style.color = ranks_colors[rare-1]
                 photo.style.borderColor = ranks_colors[rare-1]
-                if (rare >= 6) {
+                if (rare >= 7) {
                     rarity.style.textShadow = "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
                 } else {
                     rarity.style.textShadow = "";
