@@ -15,6 +15,24 @@
     unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+    }
+    50%, 60%, 70% {
+        transform: rotate(5deg);
+    }
+    55%, 65%, 75% {
+        transform: rotate(-5deg);
+    }
+    80% {
+        transform: rotateY(0)
+    }
+	100% {
+        transform: translateY(0);
+    }
+}
+
 * {
     font-family: 'Rubik';
 }
@@ -24,25 +42,20 @@ html {
 }
 
 .main {
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: 700px 1fr;
-    grid-template-rows: 40px 1fr;
-}
-
-.rand {
-    grid-row: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
 }
 
 .random-butt {
     display: block;
     margin: auto;
     padding: 0;
-    width: 350px;
-    height: 40px;
+    width: 15em;
+    height: 2em;
     font-size: 2em;
     font-family: 'Rubik';
-    height: 45px;
     color: #ffffff;
     background-color: rgb(197, 6, 255);
     border: 2px solid #ffffff;
@@ -52,6 +65,12 @@ html {
 .random-butt:hover {
     background-color: rgba(150, 0, 196, 0.993);
     transition: 300ms;
+}
+
+.random-items {
+    display: block;
+    margin: 0 auto;
+    height: 850px;
 }
 
 .rarity {
@@ -81,11 +100,10 @@ html {
     display: inline-flex;
     margin: 10% 20px auto 0;
     row-gap: auto;
-    width: 10vw;
+    width: auto;
     flex-wrap: wrap;
     flex-direction: column;
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
+    
 }
 
 .chance {
@@ -110,4 +128,28 @@ html {
 .legendary {
     color: #ffc400;
     text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
+}
+
+.minigame-button {
+    display: block;
+    margin: 50px auto;
+    padding: 10px;
+    width: 350px;
+    height: 97px;
+    background-image: url(imgs/chesters.png);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 2rem;
+    -webkit-text-stroke: 1px #1f1e1e;
+}
+
+.minigame-button:hover {
+    animation: shake 1.2s;
+}
+
+.minigame-form {
+    display: block;
+    margin: 0 auto;
 }
