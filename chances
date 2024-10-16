@@ -1,0 +1,37 @@
+.chances {
+    display: inline-flex;
+    margin: 5em 20px auto 20px;
+    font-size: 1em;
+    row-gap: auto;
+    width: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 5px dotted white;
+    border-radius: 2px;
+}
+
+.chance {
+    font-family: "M PLUS Rounded 1c" !important; 
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.common {
+    color: #c2c2c2;
+}
+
+.rare {
+    color: #00f7ff;
+}
+
+.epic {
+    color: #c918ff;
+    text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
+}
+
+.legendary {
+    color: #ffc400;
+    text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
+}
+

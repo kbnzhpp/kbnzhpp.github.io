@@ -11,6 +11,16 @@ function Random() {
     return i 
 }   
 
+function open_bar() {
+    document.getElementById("collection-images").style.width = "100%";
+    document.getElementById("arrow-right").style.display = "none";
+  }
+  
+function close_bar() {
+    document.getElementById("collection-images").style.width = "0";
+    document.getElementById("arrow-right").style.display = "block";
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const button1 = document.querySelector('#button1')
     const photo = document.querySelector('.photo')
@@ -45,3 +55,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 })
+

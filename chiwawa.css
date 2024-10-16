@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;900&display=swap');
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 929px) {
+    .random-butt {
+        width: 100%;
+    }
+
+    .collection-images {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @font-face {
     font-family: 'Rubik';
     font-style: normal;
@@ -6,7 +19,8 @@
     src: url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nMrXyi0A.woff2) format('woff2');
     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
-  @font-face {
+
+@font-face {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 300 900;
@@ -37,24 +51,21 @@
     font-family: 'Rubik';
 }
 
-html {
+body {
     background-color: #181818;
 }
 
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    
+p {
+    color: white;
 }
 
 .random-butt {
     display: block;
-    margin: auto;
+    margin: 0 auto 19px;
     padding: 0;
-    width: 13em;
-    height: 2em;
-    font-size: 2em;
+    width: 30rem;
+    height: 3rem;
+    font-size: 2.4em;
     font-family: 'Rubik';
     color: #ffffff;
     background-color: rgb(197, 6, 255);
@@ -69,8 +80,8 @@ html {
 
 .random-items {
     display: block;
-    margin: 0 auto;
-    height: 850px;
+    margin: auto;
+    height: 600px;
 }
 
 .rarity {
@@ -85,54 +96,73 @@ html {
     display: block;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    height: 800px;
+    height: 500px;
 }
 
 .photo {
     display: block;
-    padding: 0;
-    margin: 20px auto;
+    margin: auto;
     border: 3px solid rgb(255, 201, 54);
     border-radius: 24px;
 }
 
-.chances {
-    display: inline-flex;
-    margin: 10% 20px auto 0;
-    row-gap: auto;
-    width: auto;
-    flex-wrap: wrap;
-    flex-direction: column;
-    
+.collection {
+    display: block;
+    transition: 0.4s;
 }
 
-.chance {
-    font-family: "Rubik";
-    font-size: 1.5em;
-    margin: 10px;
+.collection-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 0;
+    transition: 0.6s;
+    overflow-x: hidden;
+}
+
+.collection-image {
+    display: block;
+    padding: 0;
+}
+
+.arrow-right, .arrow-left{
+    width: 50px;
+    height: 50px;
+}
+
+.arrow-right:hover, .arrow-left:hover {
+    opacity: 0.9;
 }
 
 .common {
-    color: #c2c2c2;
+    border: 5px solid;
+    border-color: #c2c2c2;
+    border-radius: 24px;
 }
 
 .rare {
-    color: #00f7ff;
+    border: 5px solid;
+    border-color: #00f7ff;
+    border-radius: 24px;
 }
 
 .epic {
-    color: #c918ff;
+    border: 5px solid;
+    border-color: #c918ff;
+    border-radius: 24px;
     text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
 }
 
 .legendary {
-    color: #ffc400;
+    border: 5px solid;
+    border-color: #ffc400;
+    border-radius: 24px;
     text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
 }
 
 .minigame-button {
     display: block;
-    margin: 50px auto;
+    margin: 5rem 40px;
     padding: 10px;
     width: 350px;
     height: 97px;
