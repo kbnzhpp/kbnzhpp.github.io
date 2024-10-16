@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;900&display=swap');
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 929px) {
+@media screen and (min-width: 720px) {
     .random-butt {
-        width: 100%;
+        width: 1rem;
     }
 
     .collection-images {
