@@ -1,3 +1,4 @@
+// Random function
 var max_img = 9
 
 function Random() {
@@ -11,16 +12,19 @@ function Random() {
     return i 
 }   
 
+// Open collection
 function open_bar() {
     document.getElementById("collection-images").style.width = "100%";
     document.getElementById("arrow-right").style.display = "none";
-  }
-  
+}
+
+// Close collection
 function close_bar() {
     document.getElementById("collection-images").style.width = "0";
     document.getElementById("arrow-right").style.display = "block";
 }
 
+// Random fill and change of photos
 document.addEventListener('DOMContentLoaded', () => {
     const button1 = document.querySelector('#button1')
     const photo = document.querySelector('.photo')

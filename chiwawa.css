@@ -1,14 +1,22 @@
-@media screen and (min-width: 1225px) {
+/* DEVICE ADAPTATION */
+@media (max-width: 500px) {
     .random-butt {
-        width: 1rem;
+        width: 90% !important;
+        font-size: 1.85rem !important;
     }
 
-    .collection-images {
-        display: flex;
-        flex-direction: column;
+    .collection-name {
+        font-size: 1.7em !important;
+        font-weight: 500;
+        margin: 10px;
+    }
+
+    .collection-image {
+        margin: 5px; 
     }
 }
 
+/* FONTS */
 @font-face {
     font-family: 'Rubik';
     font-style: normal;
@@ -27,6 +35,7 @@
     unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
+/* ANIMATIONS */
 @keyframes shake {
     0% {
         transform: translateY(0);
@@ -45,6 +54,7 @@
     }
 }
 
+/* DEFAULT ATTRIBUTES STYLE */
 * {
     font-family: 'Rubik';
 }
@@ -57,6 +67,7 @@ p {
     color: white;
 }
 
+/* RANDOM PHOTO DEFINITION AND SHOW*/
 .random-butt {
     display: block;
     margin: 0 auto 19px;
@@ -104,6 +115,13 @@ p {
     border-radius: 24px;
 }
 
+/* COLLECTION OF CARDS */
+.collection-name {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 10px;
+}
+
 .collection {
     display: block;
     transition: 0.4s;
@@ -112,15 +130,26 @@ p {
 .collection-images {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 0;
-    transition: 0.6s;
-    overflow-x: hidden;
+    height: 450px;
+    transition: 0.4s;
+    overflow-x: scroll; 
+    overflow-y: scroll;
 }
 
 .collection-image {
     display: block;
     padding: 0;
+    margin: 10px
+}
+
+.arrow-left {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 .arrow-right, .arrow-left{
@@ -132,6 +161,7 @@ p {
     opacity: 0.9;
 }
 
+/* RARITIES */
 .common {
     border: 5px solid;
     border-color: #c2c2c2;
@@ -158,6 +188,7 @@ p {
     text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
 }
 
+/* MINIGAME */
 .minigame-button {
     display: block;
     margin: 5rem 40px;

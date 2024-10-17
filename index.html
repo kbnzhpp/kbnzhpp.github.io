@@ -19,8 +19,8 @@
             </div>
         </div>
         <div class="collection">
-            <p>Коллекция карточек</p>
-            <span class="arrow-right" id="arrow-right" onclick="open_bar()"><img src="svgs/arrow_right.svg" alt="Открыть коллекцию" width="50px" height="50px"></span>
+            <p class="collection-name">Коллекция карточек:</p>
+            <span class="arrow-right" id="arrow-right" onclick="open_bar()"><img src="svgs/arrow_right.svg" alt="Открыть коллекцию" width="70px" height="70px"></span>
             <div class="collection-images" id="collection-images">
                 <img src="imgs/1.jpg" alt="Алексей" class="collection-image common">
                 <img src="imgs/2.jpg" alt="Алексей" class="collection-image common">
@@ -30,9 +30,12 @@
                 <img src="imgs/6.jpg" alt="Алексей" class="collection-image rare">
                 <img src="imgs/7.jpg" alt="Алексей" class="collection-image epic">
                 <img src="imgs/8.jpg" alt="Алексей" class="collection-image epic">
-                <img src="imgs/9.jpg" alt="Алексей" class="collection-image legendary">
-                <a href="#" class="arrow-left" onclick="close_bar()"><img src="svgs/arrow_left.svg" width="50px" height="50px"></a>
+                <div class="open-arrow" style="display: flex; flex-direction: row;">
+                    <img src="imgs/9.jpg" alt="Алексей" class="collection-image legendary">
+                    <a class="arrow-left" onclick="close_bar()"><img src="svgs/arrow_left.svg" width="70px" height="70px"></a>
+                </div>
             </div>
+            
         </div>
     </div>
     <div class="minigame">
