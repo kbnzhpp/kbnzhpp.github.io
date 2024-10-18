@@ -5,7 +5,7 @@ function Random() {
     let i = 1
     for (let j = 1; j < max_img; j++) {
         var x = Math.random()
-        if (x < 0.47) {
+        if (x <= 0.5) {
             i++
         }
     }
@@ -42,16 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 let rare = Random()
                 var final_img = "imgs/" + rare + '.jpg'
                 photo.setAttribute('src', final_img)
-                ranks = ['Обычный', 'Обычный', 'Редкий', 'Редкий', 'Редкий', 'Редкий', 'Эпический', 'Эпический', 'Легендарный']
-                ranks_colors = ['#c2c2c2', '#c2c2c2', '#00f7ff', '#00f7ff', '#00f7ff', '#00f7ff', '#c918ff', '#c918ff', '#ffc400']
-                ranks_glow = ['#ce4ff5', '#ffd448']
+                ranks = ['Легендарный', 'Эпический', 'Редкий', 'Обычный', 'Обычный', 'Обычный', 'Редкий', 'Эпический', 'Легендарный']
+                ranks_colors = ['#ffc400', '#c918ff', '#00f7ff', '#c2c2c2', '#c2c2c2', '#c2c2c2', '#00f7ff', '#c918ff', '#ffc400']
                 rarity.style.color = ranks_colors[rare-1]
                 photo.style.borderColor = ranks_colors[rare-1]
-                if (rare >= 7) {
-                    rarity.style.textShadow = "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
-                } else {
-                    rarity.style.textShadow = "";
-                }
                 rarity.innerHTML = ranks[rare-1]
                 showleha.style.opacity = 1 // turn on animation again
                 button1.removeAttribute('disabled', '')
@@ -60,3 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+// Unlock of ultra-legend card
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button1 = document.querySelector('#button1')
+    const button_ultra = document.querySelector('#button-ultra')
+    count = 0
+    button1.addEventListener('click', () => {
+        count += 1
+        if (count >= 100) {
+            button_ultra.style.animation = "shake 1.2s infinite"
+        }
+    });
+    
+    button_ultra.addEventListener('click', () => {
+        if (count < 100) {
+            alert('Ты должен получить Алексея как минимум 100 раз')
+        }
+    });
+    
+    
+});
