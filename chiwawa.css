@@ -51,14 +51,33 @@
     }
 }
 
-@keyframes no {
+@keyframes refuse {
     0% {
         transform: translateX(0);
     }
     10% {
+        transform: translateX(8px);
+    }
+    20% {
+        transform: translateX(-8px);
+    }
+    40% {
+        transform: translateX(7px);
+    }
+    50% {
+        transform: translateX(-7px);
+    }
+    60% {
         transform: translateX(5px);
     }
-}
+    70% {
+        transform: translateX(-5px);
+    }
+    80% {
+        transform: translateX(0px);
+    }
+}   
+
 
 /* DEFAULT ATTRIBUTES STYLE */
 * {
@@ -73,6 +92,19 @@ p {
     color: white;
 }
 
+.global-transition *:not(.ultra-legend):not(.ultra-legend .ultra-legend-card) {
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+body.global-display *:not(.ultra-legend) {
+    display: none;
+}
+
+body.global-display, 
+body.global-display .ultra-legend *:not(.ultra-legend-button) {
+    display: block;
+}
 /* RANDOM PHOTO DEFINITION AND SHOW*/
 .random-butt {
     display: block;
@@ -122,6 +154,10 @@ p {
 }
 
 /* COLLECTION OF CARDS */
+.collection-cards {
+    display: flex;
+    flex-direction: row;
+}
 .collection-name {
     font-size: 1.5em;
     font-weight: 500;
@@ -140,7 +176,7 @@ p {
     width: 0;
     height: 450px;
     transition: 0.2s;
-    overflow-x: scroll; 
+    overflow-x: none; 
     overflow-y: scroll;
 }
 
@@ -151,10 +187,7 @@ p {
 }
 
 .arrow-left {
-    display: block;
-    position: relative;
-    top: 0px;
-    left: 0px;
+    display: none;
 }
 
 .arrow-right, .arrow-left{
@@ -166,7 +199,7 @@ p {
     opacity: 0.9;
 }
 
-/* RARITIES */
+/* RARITIES AND THEIR COLORS*/
 .common {
     border: 5px solid;
     border-color: #c2c2c2;
@@ -183,18 +216,22 @@ p {
     border: 5px solid;
     border-color: #c918ff;
     border-radius: 24px;
-    text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
 }
 
 .legendary {
     border: 5px solid;
     border-color: #ffc400;
     border-radius: 24px;
-    text-shadow: "-1px -1px #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff";
 }
 
-/* MINIGAME */
-.ultra-button {
+.ultra-legend-color {
+    border: 5px solid;
+    border-color: #f5750d;
+    border-radius: 24px;
+}
+/* ULTRA LEGEND */
+.ultra-legend-button,
+.back-button {
     display: block;
     margin: 5rem 40px;
     padding: 10px;
@@ -208,11 +245,28 @@ p {
     font-size: 2rem;
     -webkit-text-stroke: 1px #1f1e1e;
     user-select: none;
-    animation: none;
     transition: 0.2s;
 }
 
-.ultra-button:hover {
+.ultra-legend-button:hover {
     opacity: 0.8;
     transition: 0.2s;
+}
+
+.back-button:hover {
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.ultra-legend-card {
+    display: none;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.6s
+}
+
+.ultra-legend-color {
+    border: 5px solid;
+    border-color: #f5750d;
+    border-radius: 24px;
 }

@@ -14,14 +14,21 @@ function Random() {
 
 // Open collection
 function open_bar() {
-    document.getElementById("collection-images").style.width = "100%";
+    document.getElementById("collection-images").style.width = "95%";
     document.getElementById("arrow-right").style.display = "none";
+    document.getElementById("arrow-left").style.display = "block";
 }
 
 // Close collection
 function close_bar() {
     document.getElementById("collection-images").style.width = "0";
     document.getElementById("arrow-right").style.display = "block";
+    document.getElementById("arrow-left").style.display = "none";
+}
+
+//Return to the back after open ultra legend
+function back() {
+    
 }
 
 // Random fill and change of photos
@@ -59,9 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const button1 = document.querySelector('#button1')
     const button_ultra = document.querySelector('#button-ultra')
+    const photo = document.querySelector("#ultra-photo")
     count = 0
     button1.addEventListener('click', () => {
-        count += 1
+        count += 50
         if (count >= 100) {
             button_ultra.style.animation = "shake 1.2s infinite"
         }
@@ -69,9 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
     button_ultra.addEventListener('click', () => {
         if (count < 100) {
-            alert('Ты должен получить Алексея как минимум 100 раз')
+            button_ultra.style.animation = "refuse 0.5s"
+            setTimeout ( () => {
+                button_ultra.style.animation = "none"
+            }, 500)
+        } else {
+            
+            document.body.classList.add('global-transition');
+            setTimeout(() => {
+                document.body.classList.add('global-display');
+                setTimeout(() => {
+                    photo.style.opacity = "1"
+                    document.body.innerHTML += '<button class="back-button" onclick="back()">Вернуться назад</button>';
+                }, 600);
+            }, 600);
         }
     });
-    
-    
 });
