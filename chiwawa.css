@@ -97,12 +97,12 @@ p {
     transition: opacity 0.6s;
 }
 
-body.global-display *:not(.ultra-legend) {
+.global-display *:not(.ultra-legend) {
     display: none;
 }
 
-body.global-display, 
-body.global-display .ultra-legend *:not(.ultra-legend-button) {
+.global-display, 
+.global-display .ultra-legend *:not(.ultra-legend-button) {
     display: block;
 }
 /* RANDOM PHOTO DEFINITION AND SHOW*/
@@ -230,8 +230,7 @@ body.global-display .ultra-legend *:not(.ultra-legend-button) {
     border-radius: 24px;
 }
 /* ULTRA LEGEND */
-.ultra-legend-button,
-.back-button {
+.ultra-legend-button {
     display: block;
     margin: 5rem 40px;
     padding: 10px;
@@ -251,11 +250,6 @@ body.global-display .ultra-legend *:not(.ultra-legend-button) {
 .ultra-legend-button:hover {
     opacity: 0.8;
     transition: 0.2s;
-}
-
-.back-button:hover {
-    opacity: 0;
-    transition: 0.6s;
 }
 
 .ultra-legend-card {

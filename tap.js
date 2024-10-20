@@ -86,9 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add('global-transition');
             setTimeout(() => {
                 document.body.classList.add('global-display');
+                
                 setTimeout(() => {
-                    photo.style.opacity = "1"
-                    document.body.innerHTML += '<button class="back-button" onclick="back()">Вернуться назад</button>';
+                    photo.style.opacity = "1";
                 }, 600);
             }, 600);
         }
