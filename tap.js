@@ -38,8 +38,8 @@ function close_bar() {
 function back() {
     const main = document.querySelectorAll('.main *:not(.ultra-legend-opened):not(.ultra-legend-opened .ultra-legend)')
     const back_button = document.querySelector(".back-button");
-
-    const ultra_div = document.querySelector(".ultra-legend-opened");
+    const button_ultra = document.querySelector('#button-ultra')
+    const ultra_div = document.querySelector(".ultra-legend");
     ultra_div.classList.add('hidden-opacity');
     setTimeout(() => {
         
@@ -53,6 +53,8 @@ function back() {
             })
             ultra_div.classList.add('hidden-display');
             back_button.style.display = 'none'
+            button_ultra.removeAttribute("disabled", '')
+            ultra_div.removeChild(back_button);
         }, 600);
     }, 600);
 }
