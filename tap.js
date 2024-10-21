@@ -39,8 +39,9 @@ function back() {
     const main = document.querySelectorAll('.main *:not(.ultra-legend-opened):not(.ultra-legend-opened .ultra-legend)')
     const back_button = document.querySelector(".back-button");
     const button_ultra = document.querySelector('#button-ultra')
-    const ultra_div = document.querySelector(".ultra-legend");
-    ultra_div.classList.add('hidden-opacity');
+    const ultra_legend = document.querySelector(".ultra-legend");
+    const ultra_div = document.querySelector(".ultra-legend-opened");
+    ultra_legend.classList.add('hidden-opacity');
     setTimeout(() => {
         
         main.forEach(elem => {
@@ -51,10 +52,10 @@ function back() {
             main.forEach(elem => {
                 elem.classList.remove('hidden-opacity');
             })
-            ultra_div.classList.add('hidden-display');
+            ultra_legend.classList.add('hidden-display');
             back_button.style.display = 'none'
             button_ultra.removeAttribute("disabled", '')
-            ultra_div.removeChild(back_button);
+            ultra_div.removeChild(back_button); 
         }, 600);
     }, 600);
 }
@@ -69,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault() // prevent update of page
             showleha.style.opacity = 0
             button1.setAttribute('disabled', '')
-            
 
             // do a lil delay to apply animation
             setTimeout(() => {
@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ultra_div = document.querySelector('.ultra-legend-opened')
     const main = document.querySelectorAll('.main *:not(.ultra-legend-opened):not(.ultra-legend-opened *)')
 
-    console.log(main)
     count = 0
 
     button1.addEventListener('click', () => {
