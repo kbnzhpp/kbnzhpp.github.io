@@ -9,19 +9,26 @@
 </head>
 <body>
     <div class="main">
-        <div class="random-items">
-            <form class="rand" id="rand">
-                <button class="random-butt" id="button1">ПОЛУЧИТЬ АЛЕКСЕЯ</button>
-            </form>
-            <div class="showleha">
-                <img class="photo" alt="Алексей">
-                <p class="rarity" id="rarity"></p>
+        <div class="cards">
+            <div class="random-items">
+                <form class="rand" id="rand">
+                    <button class="random-butt" id="button1">ПОЛУЧИТЬ АЛЕКСЕЯ</button>
+                </form>
+                <div class="showleha">
+                    <img class="photo" alt="Алексей">
+                    <p class="rarity" id="rarity"></p>
+                </div>
+            </div>
+            <div class="ultra-legend-open" id="ultra-legend">
+                <div class="">
+                    <button class="ultra-legend-button" id="button-ultra">УЛЬТРА-ЛЕГЕНДА</button>
+                </div>
             </div>
         </div>
         <div class="collection">
             <p class="collection-name">Коллекция карточек:</p>
             <div class="collection-cards">
-                <span class="arrow-right" id="arrow-right" onclick="open_bar()"><img src="svgs/arrow_right.svg" alt="Открыть коллекцию" width="70px" height="70px"></span>
+                <span class="arrow-right" id="arrow-right" onclick="open_bar()"><img src="svgs/arrow_right.svg" alt="Открыть коллекцию" width="60px" height="60px"></span>
                 <div class="collection-images" id="collection-images">
                     <img src="imgs/5.jpg" alt="Алексей" class="collection-image common">
                     <img src="imgs/4.jpg" alt="Алексей" class="collection-image common">
@@ -34,16 +41,16 @@
                     <img src="imgs/9.jpg" alt="Алексей" class="collection-image legendary">
                 </div>
                 <div class="close-bar">
-                    <span class="arrow-left" id="arrow-left" onclick="close_bar()"><img src="svgs/arrow_left.svg" width="70px" height="70px"></span>
+                    <span class="arrow-left" id="arrow-left" onclick="close_bar()"><img src="svgs/arrow_left.svg" width="60px" height="60px"></span>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="ultra-legend">
-        <div class="">
-            <button class="ultra-legend-button" id="button-ultra">УЛЬТРА-ЛЕГЕНДА</button>
+        <div class="ultra-legend-opened">
+            <div class="ultra-legend hidden-display hidden-opacity">
+                <img src="imgs/ultra_legend.jpg" alt="" class="ultra-legend-card ultra-legend-color" id="ultra-photo">
+                <p class="ultra-legend-text">МЕГА ХУЙ</p>
+            </div>
         </div>
-        <img src="imgs/ultra_legend.jpg" alt="" class="ultra-legend-card ultra-legend-color" id="ultra-photo">
     </div>
 </body>
 </html>

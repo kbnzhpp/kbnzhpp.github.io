@@ -1,9 +1,12 @@
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .random-butt {
         width: 90% !important;
         font-size: 1.85rem !important;
     }
 
+    .random-items {
+        width: 400px !important;
+    }
     .collection-name {
         font-size: 1.7em !important;
         font-weight: 500;
@@ -82,6 +85,7 @@
 /* DEFAULT ATTRIBUTES STYLE */
 * {
     font-family: 'Rubik';
+    transition: opacity 0.6s;
 }
 
 body {
@@ -92,23 +96,17 @@ p {
     color: white;
 }
 
-.global-transition *:not(.ultra-legend):not(.ultra-legend .ultra-legend-card) {
+.hidden-display {
+    display: none !important;
+}
+
+.hidden-opacity {
     opacity: 0;
-    transition: opacity 0.6s;
-}
-
-.global-display *:not(.ultra-legend) {
-    display: none;
-}
-
-.global-display, 
-.global-display .ultra-legend *:not(.ultra-legend-button) {
-    display: block;
 }
 /* RANDOM PHOTO DEFINITION AND SHOW*/
 .random-butt {
     display: block;
-    margin: 0 auto 19px;
+    margin: 10px auto 19px;
     padding: 0;
     width: 30rem;
     height: 3rem;
@@ -118,17 +116,22 @@ p {
     background-color: rgb(197, 6, 255);
     border: 2px solid #ffffff;
     border-radius: 10px;    
+    transition: 0.3s;
 }
 
 .random-butt:hover {
     background-color: rgba(150, 0, 196, 0.993);
-    transition: 300ms;
+    transition: 0.3s;
 }
 
 .random-items {
     display: block;
     margin: auto;
+    width: 500px;
     height: 600px;
+    border-radius: 10px;
+    border: 2px solid #222222;
+    background-color: rgb(27, 27, 27);
 }
 
 .rarity {
@@ -178,6 +181,7 @@ p {
     transition: 0.2s;
     overflow-x: none; 
     overflow-y: scroll;
+    
 }
 
 .collection-image {
@@ -191,12 +195,14 @@ p {
 }
 
 .arrow-right, .arrow-left{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    transition: 0.2s;
 }
 
 .arrow-right:hover, .arrow-left:hover {
-    opacity: 0.9;
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 
 /* RARITIES AND THEIR COLORS*/
@@ -248,19 +254,28 @@ p {
 }
 
 .ultra-legend-button:hover {
-    opacity: 0.8;
+    transform: translateY(-6px);
     transition: 0.2s;
 }
 
 .ultra-legend-card {
-    display: none;
-    margin: 0 auto;
-    opacity: 0;
-    transition: opacity 0.6s
+    display: block;
+    margin: 0 auto !important;
 }
 
 .ultra-legend-color {
     border: 5px solid;
     border-color: #f5750d;
     border-radius: 24px;
+}
+
+.ultra-legend-text {
+    color: #f5750d;
+    font-size: 1.7em;
+    text-align: center;
+}
+/* BACK BUTTON */
+.back-button {
+    display: block !important;
+    opacity: 1;
 }
