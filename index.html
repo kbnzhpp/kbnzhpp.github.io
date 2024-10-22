@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>random</title>
     <link rel="stylesheet" href="chiwawa.css">
-    <script src="tap.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="main">
         <div class="cards">
             <div class="random-items">
-                <form class="rand" id="rand">
-                    <button class="random-butt" id="button1">ПОЛУЧИТЬ АЛЕКСЕЯ</button>
-                </form>
+                <button class="random-butt" id="button1">ПОЛУЧИТЬ АЛЕКСЕЯ</button>
                 <div class="showleha">
-                    <img class="photo" alt="Алексей">
+                    <img class="photo" alt="Алексей" onclick="easter_egg()">
                     <p class="rarity" id="rarity"></p>
                 </div>
             </div>
             <div class="ultra-legend-open" id="ultra-legend">
-                <div class="">
-                    <button class="ultra-legend-button" id="button-ultra">УЛЬТРА-ЛЕГЕНДА</button>
-                </div>
+                <button class="ultra-legend-button" id="button-ultra">УЛЬТРА-ЛЕГЕНДА</button>
+                <p class="ultra-legend-button-text">Для открытия ультра легенды нужно получить еще <span class="count-cards">100</span> карточек</p>
             </div>
         </div>
         <div class="collection">

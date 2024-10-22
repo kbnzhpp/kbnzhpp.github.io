@@ -1,22 +1,54 @@
-@media (max-width: 550px) {
+@media (max-width: 630px) {
     .random-butt {
-        width: 90% !important;
-        font-size: 1.85rem !important;
+        width: 95% !important;
+        font-size: 1.7rem !important;
     }
 
     .random-items {
-        width: 400px !important;
+        width: 500px !important;
     }
+
     .collection-name {
-        font-size: 1.7em !important;
         font-weight: 500;
         margin: 10px;
     }
 
-    .collection-image {
-        margin: 5px; 
+    .ultra-legend-card {
+        margin: 0 !important;
     }
+
+    .ultra-legend-opened {
+        width: 350px !important;
+    }
+
+    @media (max-width: 455px) {
+        .random-butt {
+            font-size: 1.2em !important;
+            font-weight: 600;
+        }
+    
+        .arrow-right, .arrow-left{
+            width: 45px !important;
+            height: 45px !important;
+            transition: 0.2s;
+        }
+    
+        .collection-image {
+            margin: 5px !important; 
+        }
+    
+        .collection {
+            width: 100% !important;
+        }
+
+        @media (max-width: 360px) {
+            .collection-images {
+                overflow-x: scroll !important;
+            }
+        }
+     }
 }
+
 
 @font-face {
     font-family: 'Rubik';
@@ -90,6 +122,7 @@
 
 body {
     background-color: #181818;
+    margin: 0
 }
 
 p {
@@ -102,6 +135,14 @@ p {
 
 .hidden-opacity {
     opacity: 0;
+}
+
+/* CARDS SHOW */
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 /* RANDOM PHOTO DEFINITION AND SHOW*/
 .random-butt {
@@ -116,7 +157,7 @@ p {
     background-color: rgb(197, 6, 255);
     border: 2px solid #ffffff;
     border-radius: 10px;    
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
 .random-butt:hover {
@@ -126,9 +167,10 @@ p {
 
 .random-items {
     display: block;
-    margin: auto;
+    margin: 0 40px 0;
+    padding: 0 20px;
     width: 500px;
-    height: 600px;
+    height: 580px;
     border-radius: 10px;
     border: 2px solid #222222;
     background-color: rgb(27, 27, 27);
@@ -169,6 +211,7 @@ p {
 
 .collection {
     display: block;
+    margin: 50px 0 50px 5px;
 }
 
 .collection-images {
@@ -178,8 +221,8 @@ p {
     justify-content: space-around;
     width: 0;
     height: 450px;
-    transition: 0.2s;
-    overflow-x: none; 
+    transition: 0.3s ease-out;
+    overflow-x: hidden; 
     overflow-y: scroll;
     
 }
@@ -187,7 +230,7 @@ p {
 .collection-image {
     display: block;
     padding: 0;
-    margin: 10px
+    margin: 15px;
 }
 
 .arrow-left {
@@ -238,8 +281,8 @@ p {
 /* ULTRA LEGEND */
 .ultra-legend-button {
     display: block;
-    margin: 5rem 40px;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 0;
     width: 350px;
     height: 97px;
     background-image: url(imgs/chesters.png);
@@ -258,24 +301,56 @@ p {
     transition: 0.2s;
 }
 
+.ultra-legend-button-text {
+    text-align: center;
+}
+
 .ultra-legend-card {
     display: block;
     margin: 0 auto !important;
+    border-radius: 24px;
+    border: 5px solid;
 }
 
 .ultra-legend-color {
-    border: 5px solid;
     border-color: #f5750d;
-    border-radius: 24px;
 }
 
 .ultra-legend-text {
     color: #f5750d;
     font-size: 1.7em;
+    font-weight: 700;
     text-align: center;
 }
+
+.ultra-legend-open {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ultra-legend-opened {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 600px;
+}
+
 /* BACK BUTTON */
 .back-button {
-    display: block !important;
-    opacity: 1;
+    display: block;
+    margin: 0 0 0 auto;
+    background: fixed;
+    background-color: transparent;
+    font-size: 1.1em;
+    color: #f5750d;
+    width: 170px;
+    border: 3px solid #fd6e2c;
+    border-radius: 5px ;
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    transform: scale(0.95);
+    transition: 0.2s;
 }
